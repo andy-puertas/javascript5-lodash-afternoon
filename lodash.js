@@ -27,6 +27,9 @@
 // Look at the structure of the data, and use map to create an array of addresses.
 
 //
+
+//const _ = require('lodash');
+
 const myEmployees = [
   {
     _id: "59ad7afa5f5c26cc3a76c210",
@@ -282,11 +285,15 @@ const myEmployees = [
   }
 ];
 
-const myEmployeesAddresses = 0; // use map to get addresses here.
+const myEmployeesAddresses = _.map(myEmployees, 'address');
+
+//console.log(myEmployeesAddresses);
 
 // Now we want to use map to get an array of ages of the employees.
 
-const myEmployeesAges = 0; // use map to get ages here.
+const myEmployeesAges = _.map(myEmployees, 'age'); // use map to get ages here.
+
+//console.log(myEmployeesAges);
 
 // union
 //  Union lets us take 2 arrays, and create a new array that only has 1 entry for
